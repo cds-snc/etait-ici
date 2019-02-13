@@ -13,14 +13,25 @@ describe("<Name />", () => {
   });
 
   test("renders a passed name and date", () => {
-    const { getByTestId } = render(<Name name="foo" date="01.01.2000" />);
+    const { getByTestId } = render(
+      <Name name="foo" date="01.01.2000" plural={false} />
+    );
     expect(getByTestId("Name")).toHaveTextContent("foo");
     expect(getByTestId("Name")).toHaveTextContent("01.01.2000");
   });
 
   test("states who was here in english and french", () => {
-    const { getByTestId } = render(<Name name="foo" date="01.01.2000" />);
+    const { getByTestId } = render(
+      <Name name="foo" date="01.01.2000" plural={false} />
+    );
     expect(getByTestId("Name")).toHaveTextContent("foo was here");
     expect(getByTestId("Name")).toHaveTextContent("foo était ici");
+  });
+
+  test("renders a plural in french", () => {
+    const { getByTestId } = render(
+      <Name name="foos" date="01.01.2000" plural={true} />
+    );
+    expect(getByTestId("Name")).toHaveTextContent("foos étaient ici");
   });
 });
