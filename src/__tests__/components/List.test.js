@@ -26,4 +26,9 @@ describe("<List />", () => {
     const { getByTestId } = render(<List />);
     expect(getByTestId("List")).toHaveTextContent("Khalid");
   });
+
+  test("renders the the name Dan", () => {
+    const { getByTestId } = render(<List />);
+    expect(getByTestId("List")).toHaveTextContent("Dan");
+  });
 });
