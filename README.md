@@ -1,4 +1,9 @@
 ## Était ici
+<p align="center">
+\|||/<br/>
+(o o)<br/>
+----ooO-(_)-Ooo----<br/>
+</p>
 
 This purpose of this application is to demo, share, and practice the continuous integration and continuous delivery (CI/CD) process at the Canadian Digital Service / Service Numérique Canadien.
 
@@ -11,3 +16,6 @@ This purpose of this application is to demo, share, and practice the continuous 
 5. Validate your addition using the review app.
 6. Ensure that all the test pass.
 7. Ask for a code review.
+
+### Live site
+[https://etait-ici.herokuapp.com/](https://etait-ici.herokuapp.com/)

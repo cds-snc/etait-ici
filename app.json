@@ -1,0 +1,16 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ],
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "etait-ici",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
