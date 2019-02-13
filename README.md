@@ -1,6 +1,6 @@
 ## Était ici
 
-This purpose of this application is to demo, teach, and practice the continuous integration and continuous delivery (CI/CD) process at the Canadian Digital Service / Service Numérique Canadien.
+This purpose of this application is to demo, share, and practice the continuous integration and continuous delivery (CI/CD) process at the Canadian Digital Service / Service Numérique Canadien.
 
 ### Instructions
 
