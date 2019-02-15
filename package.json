@@ -10,7 +10,9 @@
     "heroku-postbuild": "yarn run build",
     "minikube": "kustomize build manifests/overlays/minikube | kubectl apply -f -",
     "delete-minikube": "kustomize build manifests/overlays/minikube | kubectl delete -f -",
-    "traefik": "minikube service --namespace=kube-system traefik-ingress-service"
+    "traefik": "minikube service --namespace=kube-system traefik-ingress-service",
+    "elenchos": "kustomize build manifests/overlays/elenchos | kubectl apply -f -",
+    "delete-elenchos": "kustomize build manifests/overlays/elenchos | kubectl delete -f -"
   },
   "repository": {
     "type": "git",
