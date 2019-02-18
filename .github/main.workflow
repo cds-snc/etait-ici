@@ -2,7 +2,6 @@ workflow "New workflow" {
   on = "push"
   resolves = [
     "Test",
-    "Filter not github actions",
     "Push",
     "Name",
     "Email",
@@ -28,14 +27,9 @@ action "Filter non master" {
   args = "not branch master"
 }
 
-action "Filter not github actions" {
-  uses = "actions/bin/filter@46ffca7632504e61db2d4cb16be1e80f333cb859"
-  args = "not actor github-actions"
-}
-
 action "Add" {
   uses = "docker://alpine/git"
-  needs = ["Filter non master", "Filter not github actions"]
+  needs = ["Filter non master"]
   args = "add -A"
 }
 
@@ -51,19 +45,19 @@ action "Commit" {
 
 action "Push" {
   uses = "docker://alpine/git"
-  args = "push --set-upstream origin test-github-actions"
+  args = "push -u origin HEAD"
   needs = ["Commit"]
   secrets = ["GITHUB_TOKEN"]
 }
 
 action "Email" {
   uses = "docker://alpine/git"
-  needs = ["Filter non master", "Filter not github actions"]
+  needs = ["Filter non master"]
   args = "config --global user.email \"mr.pinchy@cds-snc.ca\""
 }
 
 action "Name" {
   uses = "docker://alpine/git"
-  needs = ["Filter non master", "Filter not github actions"]
+  needs = ["Filter non master"]
   args = "config --global user.name \"Mr. Pinchy\""
 }
