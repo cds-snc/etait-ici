@@ -4,6 +4,8 @@ workflow "New workflow" {
     "Test",
     "Filter not github actions",
     "Push",
+    "Name",
+    "Email",
   ]
 }
 
@@ -39,7 +41,11 @@ action "Add" {
 
 action "Commit" {
   uses = "docker://alpine/git"
-  needs = ["Add"]
+  needs = [
+    "Add",
+    "Name",
+    "Email",
+  ]
   runs = "git commit -m 'auto'"
 }
 
@@ -48,4 +54,16 @@ action "Push" {
   args = "push"
   needs = ["Commit"]
   secrets = ["GITHUB_TOKEN"]
+}
+
+action "Email" {
+  uses = "docker://alpine/git"
+  needs = ["Filter non master", "Filter not github actions"]
+  args = "git config --global user.email \"max@neuvians.net\""
+}
+
+action "Name" {
+  uses = "docker://alpine/git"
+  needs = ["Filter non master", "Filter not github actions"]
+  args = "config --global user.name \"Max Neuvians\""
 }
