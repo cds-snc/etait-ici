@@ -59,7 +59,7 @@ action "Push" {
 action "Email" {
   uses = "docker://alpine/git"
   needs = ["Filter non master", "Filter not github actions"]
-  args = "git config --global user.email \"max@neuvians.net\""
+  args = "config --global user.email \"max@neuvians.net\""
 }
 
 action "Name" {
