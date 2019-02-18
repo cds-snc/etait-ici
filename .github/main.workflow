@@ -3,7 +3,7 @@ workflow "New workflow" {
   resolves = [
     "Test",
     "Filter not github actions",
-    "Commit back",
+    "Push",
   ]
 }
 
@@ -31,9 +31,21 @@ action "Filter not github actions" {
   args = "not actor github-actions"
 }
 
-action "Commit back" {
+action "Add" {
   uses = "docker://alpine/git"
   needs = ["Filter non master", "Filter not github actions"]
+  args = "add -A"
+}
+
+action "Commit" {
+  uses = "docker://alpine:git"
+  needs = ["Add"]
+  args = "commit -m \"skip CI\""
+}
+
+action "Push" {
+  uses = "docker://alpine:git"
+  args = "push"
+  needs = ["Commit"]
   secrets = ["GITHUB_TOKEN"]
-  runs = "git add -A && git commit -m \"Auto update\" && git push"
 }
