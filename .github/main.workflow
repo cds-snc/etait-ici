@@ -46,7 +46,7 @@ action "Commit" {
     "Name",
     "Email",
   ]
-  runs = "git commit -m 'auto'"
+  runs = "git commit -m 'auto' --allow-empty"
 }
 
 action "Push" {
