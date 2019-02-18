@@ -51,7 +51,7 @@ action "Commit" {
 
 action "Push" {
   uses = "docker://alpine/git"
-  args = "push"
+  args = "push --set-upstream origin test-github-actions"
   needs = ["Commit"]
   secrets = ["GITHUB_TOKEN"]
 }
