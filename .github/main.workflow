@@ -34,6 +34,6 @@ action "Filter not github actions" {
 action "Commit back" {
   uses = "docker://alpine/git"
   needs = ["Filter non master", "Filter not github actions"]
-  args = "git add -A && git commit -m \"Auto update\" && git push"
   secrets = ["GITHUB_TOKEN"]
+  runs = "git add -A && git commit -m \"Auto update\" && git push"
 }
