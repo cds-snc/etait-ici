@@ -40,7 +40,7 @@ action "Add" {
 action "Commit" {
   uses = "docker://alpine/git"
   needs = ["Add"]
-  args = "commit -m 'skip CI'"
+  args = "[\"commit\", \"-m\", \"'skip CI'\"]"
 }
 
 action "Push" {
