@@ -40,7 +40,7 @@ action "Add" {
 action "Commit" {
   uses = "docker://alpine/git"
   needs = ["Add"]
-  runs = "git commit -m 'skip CI'"
+  runs = "git commit -m 'auto'"
 }
 
 action "Push" {
