@@ -40,7 +40,7 @@ action "Commit" {
     "Name",
     "Email",
   ]
-  runs = "git commit -m 'auto' --allow-empty"
+  runs = "git commit -m ImageScript --allow-empty"
 }
 
 action "Push" {
@@ -59,5 +59,5 @@ action "Email" {
 action "Name" {
   uses = "docker://alpine/git"
   needs = ["Filter non master"]
-  args = "config --global user.name \"Mr. Pinchy\""
+  args = "config --global user.name \"MrPinchy\""
 }
