@@ -32,7 +32,7 @@ action "Filter not github actions" {
 }
 
 action "Commit back" {
-  uses = "actions/bin/sh@master"
+  uses = "docker://alpine/git"
   needs = ["Filter non master", "Filter not github actions"]
   args = "git add -A && git commit -m \"Auto update\" && git push"
   secrets = ["GITHUB_TOKEN"]
