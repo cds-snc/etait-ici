@@ -38,13 +38,13 @@ action "Add" {
 }
 
 action "Commit" {
-  uses = "docker://alpine:git"
+  uses = "docker://alpine/git"
   needs = ["Add"]
   args = "commit -m \"skip CI\""
 }
 
 action "Push" {
-  uses = "docker://alpine:git"
+  uses = "docker://alpine/git"
   args = "push"
   needs = ["Commit"]
   secrets = ["GITHUB_TOKEN"]
