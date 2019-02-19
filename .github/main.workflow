@@ -28,6 +28,6 @@ action "Filter master" {
 action "Auto-commit" {
   uses = "docker://cdssnc/auto-commit-github-action"
   needs = ["Filter master"]
-  args = "Test commit #2"
+  args = "This is an auto-commit"
   secrets = ["GITHUB_TOKEN"]
 }
