@@ -1,6 +1,9 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Test"]
+  resolves = [
+    "Test",
+    "Auto-commit",
+  ]
 }
 
 action "Build" {
@@ -15,4 +18,16 @@ action "Test" {
   env = {
     CI = "true"
   }
+}
+
+action "Filter master" {
+  uses = "actions/bin/filter@46ffca7632504e61db2d4cb16be1e80f333cb859"
+  args = "not branch master"
+}
+
+action "Auto-commit" {
+  uses = "docker://cdssnc/auto-commit-github-action"
+  needs = ["Filter master"]
+  args = "Test commit"
+  secrets = ["GITHUB_TOKEN"]
 }
