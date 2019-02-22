@@ -22,4 +22,5 @@ action "Test" {
 
 action "Is touched #1?" {
   uses = "docker://cdssnc/touched-github-action"
+  args = "**jpg"
 }
