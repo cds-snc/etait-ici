@@ -2,7 +2,7 @@ workflow "New workflow" {
   on = "push"
   resolves = [
     "Test",
-    "Is touched?",
+    "Is touched #1?",
   ]
 }
 
@@ -20,6 +20,6 @@ action "Test" {
   }
 }
 
-action "Is touched?" {
+action "Is touched #1?" {
   uses = "docker://cdssnc/touched-github-action"
 }
