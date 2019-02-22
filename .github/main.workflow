@@ -1,6 +1,9 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Test"]
+  resolves = [
+    "Test",
+    "Is touched?",
+  ]
 }
 
 action "Build" {
@@ -15,4 +18,8 @@ action "Test" {
   env = {
     CI = "true"
   }
+}
+
+action "Is touched?" {
+  uses = "docker://cdssnc/touched-github-action"
 }
