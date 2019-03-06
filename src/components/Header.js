@@ -6,7 +6,7 @@ class Header extends React.Component {
     return (
       <div className="Header">
         <div className="Header-header">
-          <h2 data-testid="Header">Était ici</h2>
+          <h2 data-testid="Header">Était ici!</h2>
           <p>
             \|||/
             <br />
