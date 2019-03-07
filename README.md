@@ -1,4 +1,5 @@
 ## Était ici
+[![Phase](https://img.shields.io/badge/Phase-Live-6ea748;.svg)](https://digital.canada.ca/products/)
 <p align="center">
 \|||/<br/>
 (o o)<br/>
