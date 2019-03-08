@@ -1,6 +1,9 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Test"]
+  resolves = [
+    "Test",
+    "Dockerfile linter",
+  ]
 }
 
 action "Build" {
@@ -15,4 +18,8 @@ action "Test" {
   env = {
     CI = "true"
   }
+}
+
+action "Dockerfile linter" {
+  uses = "docker://cdssnc/docker-lint"
 }
