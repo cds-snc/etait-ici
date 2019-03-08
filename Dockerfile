@@ -1,7 +1,7 @@
 FROM node:alpine
 
 WORKDIR /app
-ADD . .
+COPY . .
 
 ENV NODE_ENV production
 ENV HOST 0.0.0.0
@@ -12,4 +12,4 @@ USER node
 
 EXPOSE 3000
 
-CMD yarn start
+CMD ["yarn", "start"]
