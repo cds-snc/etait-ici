@@ -6,7 +6,8 @@ const data = [
   { name: "CDS-SNC", date: "12.02.2019", plural: true },
   { name: "L'équipe de la Plateforme", date: "12.02.2019", plural: true },
   { name: "Khalid", date: "13.02.2019", plural: false },
-  { name: "Dan", date: "13.02.2019", plural: false }
+  { name: "Dan", date: "13.02.2019", plural: false },
+  { name: "Élenchos", date: "11.03.2019", plural: false }
 ];
 
 const listItems = data.map((row, index) => (
