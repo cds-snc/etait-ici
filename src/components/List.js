@@ -39,35 +39,20 @@ const data = [{
   }
 ];
 
-const listItems = data.map((row, index) => ( <
-  li key = {
-    index
-  } >
-  <
-  Name name = {
-    row.name
-  }
-  date = {
-    row.date
-  }
-  plural = {
-    row.plural
-  }
-  /> < /
-  li >
+const listItems = data.map((row, index) => (
+  <li key={index}>
+    <Name name={row.name} date={row.date} plural={row.plural} />
+  </li>
 ));
 
 class List extends React.Component {
   render() {
-    return ( <
-      div className = "ListHold" >
-      <
-      ul className = "List"
-      data - testid = "List" > {
-        listItems
-      } <
-      /ul> < /
-      div >
+    return (
+      <div className="ListHold">
+        <ul className="List" data-testid="List">
+          {listItems}
+        </ul>
+      </div>
     );
   }
 }
