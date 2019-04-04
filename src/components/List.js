@@ -33,7 +33,7 @@ const data = [{
     plural: false
   },
               {
-                  name: "Cathy",
+                  name: "Cathy Do",
                   date: "04.04.2019",
                   plural: false
               }   
