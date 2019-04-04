@@ -8,7 +8,9 @@ const data = [
   { name: "Khalid", date: "13.02.2019", plural: false },
   { name: "Dan", date: "13.02.2019", plural: false },
   { name: "Haitham Ahmad", date: "04.04.2019", plural: false},	
-  { name: "Élenchos", date: "11.03.2019", plural: false }
+  { name: "Élenchos", date: "11.03.2019", plural: false },
+  { name: "John O'Brien", date: "04.04.2019", plural: false },
+  { name: "Pat Heard", date: "04.04.2019", plural: false }
 ];
 
 const listItems = data.map((row, index) => (
