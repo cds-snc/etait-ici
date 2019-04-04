@@ -3,6 +3,7 @@ import Name from "./Name";
 import "./List.css";
 
 
+
 const data = [{
     name: "CDS-SNC",
     date: "12.02.2019",
@@ -39,7 +40,7 @@ const data = [{
     plural: false
   }
 
-];
+
 
 const listItems = data.map((row, index) => (
   <li key={index}>
