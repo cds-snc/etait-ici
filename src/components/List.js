@@ -31,7 +31,12 @@ const data = [{
     name: "John O'Brien",
     date: "04.04.2019",
     plural: false
-  }
+  },
+              {
+                  name: "Cathy",
+                  date: "04.04.2019",
+                  plural: false
+              }   
 ];
 
 const listItems = data.map((row, index) => ( <
