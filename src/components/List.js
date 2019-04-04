@@ -31,6 +31,11 @@ const data = [{
     name: "John O'Brien",
     date: "04.04.2019",
     plural: false
+  },
+   {
+    name: "Bo",
+    date: "04.04.2019",
+    plural: false
   }
 ];
 
