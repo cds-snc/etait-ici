@@ -7,7 +7,8 @@ const data = [
   { name: "L'équipe de la Plateforme", date: "12.02.2019", plural: true },
   { name: "Khalid", date: "13.02.2019", plural: false },
   { name: "Dan", date: "13.02.2019", plural: false },
-  { name: "Élenchos", date: "11.03.2019", plural: false }
+  { name: "Élenchos", date: "11.03.2019", plural: false },
+  { name: "John O'Brien', date: "2019-04-04", plural: false}
 ];
 
 const listItems = data.map((row, index) => (
