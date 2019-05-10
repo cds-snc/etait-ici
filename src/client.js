@@ -3,6 +3,8 @@ import BrowserRouter from "react-router-dom/BrowserRouter";
 import React from "react";
 import { hydrate } from "react-dom";
 
+// nothing to see here
+
 hydrate(
   <BrowserRouter>
     <App />
