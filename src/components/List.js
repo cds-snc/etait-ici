@@ -22,7 +22,7 @@ class List extends React.Component {
   render() {
     return (
       <div className="ListHold">
-        <div>Log Reporter V1</div>
+        <div>Log Reporter V2</div>
         <ul className="List" data-testid="List">
           {listItems}
         </ul>
