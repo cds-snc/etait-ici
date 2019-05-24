@@ -23,7 +23,7 @@ class List extends React.Component {
     return (
       <div className="ListHold">
         <ul className="List" data-testid="List">
-          <div>List 2</div>
+          <div>List 3 - it works</div>
           {listItems}
         </ul>
       </div>
