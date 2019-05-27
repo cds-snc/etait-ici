@@ -16,4 +16,8 @@ describe("<Header />", () => {
     const { getByTestId } = render(<Header />);
     expect(getByTestId("Header")).toHaveTextContent("Était ici");
   });
+
+  test("force fail", () => {
+    expect(true).toHaveTextContent(false);
+  });
 });
