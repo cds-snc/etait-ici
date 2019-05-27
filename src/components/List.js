@@ -23,7 +23,7 @@ class List extends React.Component {
     return (
       <div className="ListHold">
         <ul className="List" data-testid="List">
-          <div>Close and cleanup clusters</div>
+          <div>Close and cleanup clusters - update 1</div>
           {listItems}
         </ul>
       </div>
