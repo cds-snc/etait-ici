@@ -9,7 +9,7 @@ const data = [
   { name: "Dan", date: "13.02.2019", plural: false },
   { name: "Élenchos", date: "11.03.2019", plural: false },
   { name: "Michael", date: "04.04.2019", plural: false },
-  { name: "Haitham Ahmad", date: "04.04.2019", plural: false }	
+  { name: "Haitham Ahmad", date: "04.04.2019", plural: false }
 ];
 
 const listItems = data.map((row, index) => (
@@ -22,6 +22,7 @@ class List extends React.Component {
   render() {
     return (
       <div className="ListHold">
+        <div>Still working?</div>
         <ul className="List" data-testid="List">
           {listItems}
         </ul>
