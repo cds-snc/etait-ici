@@ -36,4 +36,9 @@ describe("<List />", () => {
     const { getByTestId } = render(<List />);
     expect(getByTestId("List")).toHaveTextContent("Élenchos");
   });
+
+  test("renders the the name @stratospheregc", () => {
+    const { getByTestId } = render(<List />);
+    expect(getByTestId("List")).toHaveTextContent("@stratospheregc");
+  });
 });
